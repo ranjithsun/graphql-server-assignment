@@ -13,7 +13,7 @@ Clone the repository and install packages:
 *************
 > git clone <-REMOTE GIT URL->
 
-cd <-cloned depository->
+> cd <-cloned depository->
 
 > npm install
 *************
@@ -25,7 +25,7 @@ Run the App using Docker Compose up command
 
 To Run in Browser
 ****************
-http://localhost:8080/graphql
+> http://localhost:8080/graphql
 ****************
 
 ## Example Query and responses
