@@ -11,6 +11,10 @@ The app is built on:
 
 Clone the repository and install packages:
 *************
+> git clone <-REMOTE GIT URL->
+
+cd <-cloned depository->
+
 > npm install
 *************
 
