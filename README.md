@@ -34,9 +34,12 @@ To Run in Browser
 
 ```
 query{
-  allLaunchPads{
-    id,
-    launchpad
+  launchPadFailures(id:"5e9e4501f509094ba4566f84"){
+    launchpad,
+    all_failures{
+      name,
+      failures
+    }
   }
 }
 ```
@@ -45,32 +48,19 @@ query{
 ```
 {
   "data": {
-    "allLaunchPads": [
-      {
-        "id": "5e9e4501f5090910d4566f83",
-        "launchpad": "VAFB SLC 3W"
-      },
-      {
-        "id": "5e9e4501f509094ba4566f84",
-        "launchpad": "CCSFS SLC 40"
-      },
-      {
-        "id": "5e9e4502f5090927f8566f85",
-        "launchpad": "STLS"
-      },
-      {
-        "id": "5e9e4502f5090995de566f86",
-        "launchpad": "Kwajalein Atoll"
-      },
-      {
-        "id": "5e9e4502f509092b78566f87",
-        "launchpad": "VAFB SLC 4E"
-      },
-      {
-        "id": "5e9e4502f509094188566f88",
-        "launchpad": "KSC LC 39A"
-      }
-    ]
+    "launchPadFailures": {
+      "launchpad": "CCSFS SLC 40",
+      "all_failures": [
+        {
+          "name": "CRS-7",
+          "failures": "helium tank overpressure lead to the second stage LOX tank explosion"
+        },
+        {
+          "name": "Amos-6",
+          "failures": "buckled liner in several of the COPV tanks, causing perforations that allowed liquid and/or solid oxygen to accumulate underneath the lining, which was ignited by friction."
+        }
+      ]
+    }
   }
 }
 ```
